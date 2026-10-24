@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Index</title>
+</head>
+
+<body>
+    <header>
+        <h3>Marwadi University</h3>
+        <nav>
+            @Html.ActionLink("Home", "Index", "Feedback")
+            @Html.ActionLink("Give Feedback", "Create", "Feedback")
+            @Html.ActionLink("View Feedback", "List", "Feedback")
+        </nav>
+    </header>
+
+    <div class="container">
+        @RenderBody()
+    </div>
+
+
+    <footer>
+        <p>Marwadi University - Department of Computer Engineering</p>
+    </footer>
+
+</body>
+</html>

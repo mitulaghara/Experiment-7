@@ -1,0 +1,59 @@
+﻿@model P7_3052_Models.FeedBack
+
+@{
+    ViewBag.Title = "Home";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@Html.Partial("_StudentInfo")
+
+<h2>Give Feedback</h2>
+
+@using (Html.BeginForm("Create", "Feedback", FormMethod.Post))
+{
+    <div>
+        @Html.LabelFor(m => m.EnrollmentNumber)
+        <br />
+        @Html.TextBoxFor(m => m.EnrollmentNumber)
+    </div>
+
+    <br />
+
+    <div>
+        @Html.LabelFor(m => m.StudentName)
+        <br />
+        @Html.TextBoxFor(m => m.StudentName)
+    </div>
+
+    <br />
+
+    <div>
+        @Html.LabelFor(m => m.Subject)
+        <br />
+        @Html.TextBoxFor(m => m.Subject)
+    </div>
+
+    <br />
+
+    <div>
+        @Html.LabelFor(m => m.Rating)
+        <br />
+        @Html.TextBoxFor(m => m.Rating)
+    </div>
+
+    <br />
+
+    <div>
+        @Html.LabelFor(m => m.Comments)
+        <br />
+        @Html.TextAreaFor(m => m.Comments, 5, 40, null)
+    </div>
+
+    <br />
+
+    <input type="submit" value="Submit Feedback" />
+}
+
+<br />
+
+@Html.ActionLink("Back to Home", "Index", "Feedback")
